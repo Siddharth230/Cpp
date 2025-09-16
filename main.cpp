@@ -1,63 +1,23 @@
 #include <iostream>
 
 int main() {
-  // This is a comment
-  /*
-    This
-    is
-    a
-    multi-line
-    comment
-  */
+  /**
+   ** The const keyword specifies that a variable's value is constant
+   ** tells the compiler to prevent anything from modifying it
+   ** (read-only)
+   */
 
-  std::cout << "Hello World!" << std::endl;
-  std::cout << "It's Good" << '\n';
+  const double PI = 3.14159;
+  double radius = 10;
+  double circumference = 2 * PI * radius;
 
-  int x = 5;
-  int y = 6;
-  int sum = x + y;
+  std::cout << circumference << "cm" << std::endl;
 
-  std::cout << x << '\n';
-  std::cout << y << '\n';
-  std::cout << sum << '\n';
+  const int LIGHT_SPEED = 299792458;
+  const int WIDTH = 1920;
+  const int HEIGHT = 1080;
 
-  //* Integer (Whole Number)
-  int age = 22;
-  int year = 2025;
-  int days = 7.5;
-
-  std::cout << days << std::endl;  // output = 7
-
-  //* Double (Number including Decimal)
-  double price = 10.99;
-  double gpa = 2.5;
-  double temperature = 25.1;
-
-  std::cout << price << std::endl;
-
-  //* Single Character
-  char grade = 'A';
-  char initial = 'C';  //? char can only store a single character
-  char currency = '$';
-
-  std::cout << initial << std::endl;
-
-  //* Boolean (true or false)
-  bool student = false;
-  bool power = true;
-  bool forSale = true;
-
-  std::cout << forSale << std::endl;
-
-  //* String (Objects that represents a sequence of text)
-  std::string name = "Sid";
-  std::string day = "Tuesday";
-  std::string food = "pizza";
-  std::string address = "123 sr. no.";
-
-  std::cout << "Hello " << name << std::endl;
-  std::cout << "You are " << age << " years old." << std::endl;
-  std::cout << address;
+  std::cout << "pixels " << WIDTH * HEIGHT;
 
   return 0;
 }
