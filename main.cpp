@@ -1,23 +1,25 @@
 #include <iostream>
 
+//* Namespace = Provides a solution for preventing name conflicts
+//* in large projects. Each entity needs a unique name.
+//* A namespace allows for identically named entities
+//* as long as the namespace are different.
+
+namespace first {
+int x = 1;
+}
+
+namespace second {
+int x = 2;
+}
+
 int main() {
-  /**
-   ** The const keyword specifies that a variable's value is constant
-   ** tells the compiler to prevent anything from modifying it
-   ** (read-only)
-   */
+  using namespace first;
+  // int x = 0;
 
-  const double PI = 3.14159;
-  double radius = 10;
-  double circumference = 2 * PI * radius;
-
-  std::cout << circumference << "cm" << std::endl;
-
-  const int LIGHT_SPEED = 299792458;
-  const int WIDTH = 1920;
-  const int HEIGHT = 1080;
-
-  std::cout << "pixels " << WIDTH * HEIGHT;
+  std::cout << x << std::endl;
+  std::cout << first::x << std::endl;
+  std::cout << second::x << std::endl;
 
   return 0;
 }
