@@ -1,19 +1,23 @@
-#include <cmath>
 #include <iostream>
 
 int main() {
-  double a;
-  double b;
-  double c;
+  //* if statements = Do something if a condition is true.
+  //*                 if not, then don't do it.
 
-  std::cout << "Enter side A: ";
-  std::cin >> a;
+  int age;
 
-  std::cout << "Enter side B: ";
-  std::cin >> b;
+  std::cout << "Enter your age: ";
+  std::cin >> age;
 
-  c = sqrt(pow(a, 2) + pow(b, 2));
-  std::cout << "Side C: " << c;
+  if (age >= 100) {
+    std::cout << "You should be Dead";
+  } else if (age >= 18) {
+    std::cout << "Welcome to the site";
+  } else if (age < 0) {
+    std::cout << "Enter valid age";
+  } else {
+    std::cout << "You are underage.";
+  }
 
   return 0;
 }
