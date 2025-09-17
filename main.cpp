@@ -1,35 +1,24 @@
 #include <iostream>
 
 int main() {
-  //* Arithmetic Operators = return the result of a specific arithmetic
-  //? operation ( + - * / )
+  /**
+   **  type conversion = conversion a value of one data type to another
+   **  Implicit = Automatic
+   **  Explicit = Precede value with new data type (int)
+   */
+  int x = 3.14;          // 3
+  double y = (int)3.14;  // 3
+  char z =
+      100;  // Converts it using ascii table to get it's value 100 = 1100100 = d
+  int correct = 8;
+  int questions = 10;
+  double score = correct / (double)questions * 100;
 
-  // parenthesis
-  // multiplication & division
-  // addition & substraction
-
-  int students = 20;
-
-  students = students + 1;
-  students += 1;
-  students++;
-
-  students = students - 1;
-  students -= 1;
-  students--;
-
-  students = students * 2;
-  students *= 2;
-
-  students = students / 2;
-  students /= 3;
-
-  int remainder = students % 3;
-
-  int num = 6 - 5 + 4 * 3 / 2;
-
-  std::cout << remainder << std::endl;
-  std::cout << num;
+  std::cout << x << std::endl;
+  std::cout << y << std::endl;
+  std::cout << z << std::endl;
+  std::cout << (char)100 << std::endl;
+  std::cout << score << "%";
 
   return 0;
 }
