@@ -1,24 +1,26 @@
 #include <iostream>
 
-int main() {
-  /**
-   **  type conversion = conversion a value of one data type to another
-   **  Implicit = Automatic
-   **  Explicit = Precede value with new data type (int)
-   */
-  int x = 3.14;          // 3
-  double y = (int)3.14;  // 3
-  char z =
-      100;  // Converts it using ascii table to get it's value 100 = 1100100 = d
-  int correct = 8;
-  int questions = 10;
-  double score = correct / (double)questions * 100;
+//* cout << (Insertion Operator)
+//* cin << (Extraction Operator)
 
-  std::cout << x << std::endl;
-  std::cout << y << std::endl;
-  std::cout << z << std::endl;
-  std::cout << (char)100 << std::endl;
-  std::cout << score << "%";
+int main() {
+  std::string name;
+  std::string fullName;
+  int age;
+
+  std::cout << "What's your name?: ";
+  std::cin >> name;
+
+  std::cin.ignore();  //* Discard the newline character
+
+  std::cout << "What's your full name?: ";
+  std::getline(std::cin, fullName);
+
+  std::cout << "What's your age?: ";
+  std::cin >> age;
+
+  std::cout << "Hello " << name << std::endl;
+  std::cout << "You are " << age << " years old.";
 
   return 0;
 }
