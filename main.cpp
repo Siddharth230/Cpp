@@ -2,22 +2,18 @@
 #include <iostream>
 
 int main() {
-  double x = 3;
-  double y = 4;
-  double pi = 3.14;
-  double q = 3.99;
-  double z;
+  double a;
+  double b;
+  double c;
 
-  // z = std::max(x, y);  // 4
-  // z = std::min(x, y);  // 3
-  // z = pow(2, 3);  // 2*2*2 = 8
-  // z = sqrt(9);  // 3
-  // z = abs(-5);  // 5
-  // z = round(pi);  // 3
-  // z = ceil(pi);  // 4
-  z = floor(q);  // 3
+  std::cout << "Enter side A: ";
+  std::cin >> a;
 
-  std::cout << z;
+  std::cout << "Enter side B: ";
+  std::cin >> b;
+
+  c = sqrt(pow(a, 2) + pow(b, 2));
+  std::cout << "Side C: " << c;
 
   return 0;
 }
