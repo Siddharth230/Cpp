@@ -1,46 +1,25 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-  char op;
-  double num1;
-  double num2;
-  double result;
-  double ans;
+  //* Ternary Operator ?: = Replacement to an if/else statement
+  //*  condition ? expression1: expression2;
 
-  cout << "************ CALCULATOR ************" << endl;
+  int grade = 75;
 
-  cout << "Enter either (+ - * /): ";
-  cin >> op;
+  // if (grade >= 60) {
+  //   std::cout << "You Pass!";
+  // } else {
+  //   std::cout << "You Fail!";
+  // }
 
-  cout << "Enter number 1: ";
-  cin >> num1;
+  grade >= 60 ? std::cout << "You Pass!" : std::cout << "You Fail" << std::endl;
 
-  cout << "Enter number 2: ";
-  cin >> num2;
+  int number = 8;
+  number % 2 == 1 ? std::cout << 'ODD' : std::cout << "EVEN" << std::endl;
 
-  switch (op) {
-    case '+':
-      ans = num1 + num2;
-      cout << ans << endl;
-      break;
-    case '-':
-      ans = num1 - num2;
-      cout << ans << endl;
-      break;
-    case '*':
-      ans = num1 * num2;
-      cout << ans << endl;
-      break;
-    case '/':
-      ans = num1 / num2;
-      cout << ans << endl;
-      break;
-    default:
-      cout << "Enter Valid Operators" << endl;
-  }
-
-  cout << "************************************";
+  bool hungry = true;
+  //* hungry ? std::cout << "You are hungry" : std::cout << "You are full" <<
+  std::cout << (hungry ? "You are hungry" : "You are full") << std::endl;
 
   return 0;
 }
