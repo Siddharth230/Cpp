@@ -1,25 +1,33 @@
 #include <iostream>
 
 int main() {
-  //* Ternary Operator ?: = Replacement to an if/else statement
-  //*  condition ? expression1: expression2;
+  //* && = Check if both conditions are true
+  //* || = Check if at least one of the two conditions is true
+  //* !  = Reverse the logical state of its operand
 
-  int grade = 75;
+  int temp;
+  bool sunny = false;
 
-  // if (grade >= 60) {
-  //   std::cout << "You Pass!";
-  // } else {
-  //   std::cout << "You Fail!";
-  // }
+  std::cout << "Enter the temperature: ";
+  std::cin >> temp;
 
-  grade >= 60 ? std::cout << "You Pass!" : std::cout << "You Fail" << std::endl;
+  if (temp > 0 && temp < 30) {
+    std::cout << "The temperature is good." << std::endl;
+  } else {
+    std::cout << "The temperature is bad" << std::endl;
+  }
 
-  int number = 8;
-  number % 2 == 1 ? std::cout << "ODD" : std::cout << "EVEN" << std::endl;
+  if (temp <= 0 || temp >= 30) {
+    std::cout << "The temperature is bad." << std::endl;
+  } else {
+    std::cout << "The temperature is good" << std::endl;
+  }
 
-  bool hungry = true;
-  //* hungry ? std::cout << "You are hungry" : std::cout << "You are full" <<
-  std::cout << (hungry ? "You are hungry" : "You are full") << std::endl;
+  if (!sunny) {
+    std::cout << "It is cloudy outside!" << std::endl;
+  } else {
+    std::cout << "It is sunny outside" << std::endl;
+  }
 
   return 0;
 }
