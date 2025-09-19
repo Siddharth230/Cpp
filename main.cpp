@@ -1,35 +1,39 @@
 #include <iostream>
 
 int main() {
-  double temp;
-  char unit;
+  std::string name;
 
-  std::cout << "***** Temperature Conversion *****" << std::endl;
-  std::cout << "F = Fahrenheit" << std::endl;
-  std::cout << "C = Celsius" << std::endl;
-  std::cout << "What unit would you like to convert to: ";
-  std::cin >> unit;
-  std::cout << "Enter the temperature in "
-            << (unit == 'F' ? "Celsius: " : "Fahrenheit: ");
-  std::cin >> temp;
+  std::cout << "Enter your name: ";
+  std::getline(std::cin, name);
 
-  switch (unit) {
-    case 'F':
-    case 'f':
-      temp = (1.8 * temp) + 32.0;
-      std::cout << "Temperature is: " << temp << "F" << std::endl;
-      break;
-    case 'C':
-    case 'c':
-      temp = (temp - 32) / 1.8;
-      std::cout << "Temperature is: " << temp << "C" << std::endl;
-      break;
-    default:
-      std::cout << "Invalid unit entered. Please enter 'C' or 'F'.\n";
-      break;
+  if (name.length() > 12) {
+    std::cout << "Your name cannot be over 12 characters.";
+  } else {
+    std::cout << "Welcome " << name << std::endl;
   }
 
-  std::cout << "**********************************";
+  if (name.empty()) {
+    std::cout << "You didn't enter your name";
+  } else {
+    std::cout << "Hello " << name << std::endl;
+  }
+
+  // name.clear(); //*Clears value of string
+
+  name.append("@gmail.com");
+
+  std::cout << "Your name is now " << name << std::endl;
+
+  std::cout << "First character in String name is " << name.at(0) << std::endl;
+
+  name.insert(0, "@");
+
+  std::cout << name << std::endl;
+
+  std::cout << name.find(' ') << std::endl;
+
+  name.erase(0, 1);
+  std::cout << name << std::endl;
 
   return 0;
 }
