@@ -1,2 +1,9 @@
+# Ignore build and output directories
 build
 output
+
+# Ignore IDE-specific files
+.vscode
+
+# Ignore the compiled executable
+main
