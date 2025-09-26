@@ -23,11 +23,11 @@ void printCarr(Car &car) { //? Uses original data value at the address and perfo
   cout << car.color << endl;
 }
 
-void paintCar(Car car, string color) {
-  car.color = color;
+void paintCar(Car car, string color) { //? Creates a copy of data and then changes it's color
+  car.color = color;                   //? which is not useful for us because we want to update value at original address
 }
 
-void paintCarr(Car &car, string color) {
+void paintCarr(Car &car, string color) {  //? Changes value at original address
   car.color = color;
 }
 
