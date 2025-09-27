@@ -6,7 +6,7 @@ public:
   string topping1;
   string topping2;
 
-  Pizza(){ }; 
+  Pizza() {};
 
   Pizza(string topping1) {
     this->topping1 = topping1;
