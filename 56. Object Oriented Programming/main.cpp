@@ -83,7 +83,7 @@ int main() {
 
   cout << car1.make << endl;
   cout << car1.model << endl;
-  cout << car1.year << endl;>
+  cout << car1.year << endl;
   cout << car1.color << endl;
 
   car1.accelerate();
